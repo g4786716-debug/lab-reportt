@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Programming Lab Report - Semester 481</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f6fb; color: #243247; line-height: 1.6; }
+    header { background: #214f78; color: white; padding: 34px 20px; text-align: center; }
+    header h1 { margin: 0 0 8px; }
+    .student { max-width: 900px; margin: 22px auto; padding: 18px 24px; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(20,40,60,.07); }
+    nav { max-width: 900px; margin: 18px auto; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 10px; }
+    nav a { color: #15558a; background: white; border: 1px solid #d6e0ec; border-radius: 7px; padding: 8px 13px; text-decoration: none; font-weight: bold; }
+    main { max-width: 900px; margin: auto; padding: 0 16px 40px; }
+    section { background: white; margin: 18px 0; padding: 24px; border-radius: 12px; box-shadow: 0 2px 10px rgba(20,40,60,.06); }
+    h2 { color: #173b67; margin-top: 0; }
+    .portfolio-card { background: #f4f7fb; padding: 16px; margin: 12px 0; border-radius: 8px; }
+    .portfolio-highlight { color: #176b55; font-weight: bold; }
+    .portfolio-link { color: #1261a0; font-weight: bold; }
+    table { border: 1px solid #333; border-spacing: 6px; width: 100%; max-width: 700px; }
+    th, td { border: 1px solid #333; padding: 12px; text-align: left; }
+    th { background: #e6eef7; }
+    tr:nth-child(even) { background: #f7f9fc; }
+    .demo-image { display: block; width: min(520px, 100%); height: auto; margin: 20px auto; border-radius: 12px; }
+    button { padding: 11px 20px; background: #245b88; color: white; border: 0; border-radius: 7px; cursor: pointer; }
+    .calculator { max-width: 430px; padding: 20px; background: #f4f7fb; border-radius: 10px; }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #b9c7d8; border-radius: 6px; }
+    #result { margin-top: 16px; font-weight: bold; }
+    footer { text-align: center; padding: 20px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <header>
+    <p>Ministry of Education | Buraydah Colleges</p>
+    <p>College of Engineering &amp; Information Technology | Department of Cybersecurity</p>
+    <h1>Web Programming Lab Report</h1>
+    <p>Semester (481) | Course: Web Programming IT311–IT127</p>
+  </header>
+
+  <div class="student">
+    <strong>Name:</strong> Ghaith ALharbi<br>
+    <strong>ID:</strong> 471000470
+  </div>
+
+  <nav aria-label="Lab navigation">
+    <a href="#lab1">Lab 1 – Colors</a>
+    <a href="#lab2">Lab 2 – Portfolio</a>
+    <a href="#lab3">Lab 3 – Grades Table</a>
+    <a href="#lab4">Lab 4 – Image Toggle</a>
+    <a href="#lab5">Lab 5 – Power Calculator</a>
+  </nav>
+
+  <main>
+    <section id="lab1">
+      <h2>Lab 1: CSS Color Formats</h2>
+      <!-- Named colors: CSS colors written by their color names. -->
+      <h3 style="color: tomato;">Tomato – Named Color</h3>
+      <h3 style="color: navy;">Navy – Named Color</h3>
+
+      <!-- RGB colors: red, green, and blue values from 0 to 255. -->
+      <h3 style="color: rgb(255, 0, 0);">Red – RGB Color</h3>
+      <h3 style="color: rgb(0, 128, 0);">Green – RGB Color</h3>
+
+      <!-- HEX colors: hexadecimal color codes beginning with #. -->
+      <h3 style="color: #6A5ACD;">Slate Blue – HEX Color</h3>
+      <h3 style="color: #FF8C00;">Dark Orange – HEX Color</h3>
+    </section>
+
+    <section id="lab2">
+      <h2>Lab 2: My Portfolio</h2>
+      <h3>About Me</h3>
+      <div class="portfolio-card">
+        <p>My name is Ghaith. I am a student interested in web programming and technology.</p>
+      </div>
+      <h3>My Skills</h3>
+      <div class="portfolio-card">
+        <p class="portfolio-highlight">HTML, CSS, JavaScript, and problem solving.</p>
+      </div>
+      <h3>Contact / Useful Resource</h3>
+      <div class="portfolio-card">
+        <p>Learn more about web development:</p>
+        <a class="portfolio-link" href="https://developer.mozilla.org/" target="_blank" rel="noopener">Visit MDN Web Docs</a>
+      </div>
+      <p><em>Note: The CSS is included in this single HTML file so the complete report can be opened as one file.</em></p>
+    </section>
+
+    <section id="lab3">
+      <h2>Lab 3: Students' Grades</h2>
+      <table>
+        <tr><th>Name</th><th>Subject</th><th>Grade</th></tr>
+        <tr><td>Ahmed</td><td>Web Programming</td><td>95</td></tr>
+        <tr><td>Sara</td><td>Database</td><td>92</td></tr>
+        <tr><td>Omar</td><td>Programming</td><td>88</td></tr>
+        <tr><td>Nouf</td><td>Computer Networks</td><td>97</td></tr>
+        <tr><td>Khalid</td><td>Cybersecurity</td><td>90</td></tr>
+      </table>
+    </section>
+
+    <section id="lab4">
+      <h2>Lab 4: Image Toggle</h2>
+      <img id="myImage" class="demo-image" alt="First illustration"
+        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'%3E%3Crect width='520' height='300' rx='22' fill='%23dceeff'/%3E%3Ccircle cx='260' cy='125' r='62' fill='%23f6c85f'/%3E%3Cpath d='M0 250 Q130 170 260 245 T520 235 V300 H0Z' fill='%2369a88d'/%3E%3Ctext x='260' y='278' text-anchor='middle' font-family='Arial' font-size='22' fill='%23173b67'%3EImage One%3C/text%3E%3C/svg%3E">
+      <div style="text-align:center;">
+        <button type="button" onclick="toggleImage()">Change Image</button>
+      </div>
+    </section>
+
+    <section id="lab5">
+      <h2>Lab 5: Power Calculator</h2>
+      <div class="calculator">
+        <label for="base">Base (x):</label>
+        <input type="number" id="base" value="2">
+        <label for="exponent">Exponent (n):</label>
+        <input type="number" id="exponent" value="3">
+        <button id="calculateButton" type="button" onclick="calculatePower()"
+          onmouseover="this.style.backgroundColor='#d97706'"
+          onmouseout="this.style.backgroundColor='#245b88'">Calculate</button>
+        <p id="result">Result will appear here.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>Web Programming – Lab Report (481)</footer>
+
+  <script>
+    function toggleImage() {
+      const image = document.getElementById("myImage");
+      if (image.dataset.version !== "two") {
+        image.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'%3E%3Crect width='520' height='300' rx='22' fill='%23fbe3e8'/%3E%3Cpath d='M90 210 L170 80 L250 210 Z' fill='%23d66b83'/%3E%3Cpath d='M210 210 L315 55 L420 210 Z' fill='%238c6bb1'/%3E%3Ccircle cx='410' cy='70' r='27' fill='%23f6c85f'/%3E%3Ctext x='260' y='278' text-anchor='middle' font-family='Arial' font-size='22' fill='%2363364b'%3EImage Two%3C/text%3E%3C/svg%3E";
+        image.alt = "Second illustration";
+        image.dataset.version = "two";
+      } else {
+        image.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='300' viewBox='0 0 520 300'%3E%3Crect width='520' height='300' rx='22' fill='%23dceeff'/%3E%3Ccircle cx='260' cy='125' r='62' fill='%23f6c85f'/%3E%3Cpath d='M0 250 Q130 170 260 245 T520 235 V300 H0Z' fill='%2369a88d'/%3E%3Ctext x='260' y='278' text-anchor='middle' font-family='Arial' font-size='22' fill='%23173b67'%3EImage One%3C/text%3E%3C/svg%3E";
+        image.alt = "First illustration";
+        image.dataset.version = "one";
+      }
+    }
+
+    // Calculate x raised to the power n using a for loop.
+    function power(x, n) {
+      let result = 1;
+      for (let i = 0; i < n; i++) {
+        result = result * x;
+      }
+      return result;
+    }
+
+    function calculatePower() {
+      const x = Number(document.getElementById("base").value);
+      const n = Number(document.getElementById("exponent").value);
+      const output = document.getElementById("result");
+
+      if (!Number.isFinite(x) || !Number.isInteger(n) || n < 0) {
+        output.textContent = "Please enter a valid base and a non-negative whole-number exponent.";
+        return;
+      }
+      output.textContent = x + " ^ " + n + " = " + power(x, n);
+    }
+  </script>
+</body>
+</html>
